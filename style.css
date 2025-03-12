@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    line-height: 1.6;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 50px;/*prevent content hiding behind the navbar*/
+}
+/*Fixed navbar*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    padding: 15px 30px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+/* Underline nav links on hover with center out effect*/
+.nav-links a{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;/*adjust the position of the underline*/
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.3s ease-in-out left 0.3s ease-in-out;
+}
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+/*add  background image to the website*/
+#hero{
+    background: url('assets/Screenshot 2024-12-12 195632.png') no-repeat center center/cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+/*applying opacity to the hero content*/
+.hero-content{
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+.btn {
+    display: inline-block;
+    background: red;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+/*main section*/
+main {
+    display: flex;
+    padding: 40px 20px;
+    gap: 20px;
+    margin-top: 20px;
+}
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.service-card {
+    background: #eee;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+/*card hover effect*/
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    cursor: pointer;
+    color: red;
+}
+ 
+/* Contact Section*/
+contact h2 {
+    margin-top: 20px;
+
+}
+ form {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+input textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    width: 40%;
+    padding: 10px;
+    background: #1f07f0;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: #5142d6;
+}
+
+/* Footer Section*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    padding: 15px 30px;
+    color: #fff;
+}
+.footer-container {
+    display: flex;
+    gap: 20px;
+}
+.footer-column li {
+    list-style: none;
+}
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
